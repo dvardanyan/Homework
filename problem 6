@@ -1,0 +1,17 @@
+// problem 6
+
+let arr = [
+
+{ book: "Catcher in the Rye", readStatus: true, percent: 40},
+{ book: "Animal Farm", readStatus: true, percent: 20},
+{ book: "Solaris&quot", readStatus: false, percent: 90 },
+{ book: "The Fall", readStatus: true, percent: 50 },
+{ book: "White Nights&quot", readStatus: false, percent: 60 } ,
+{ book: "After Dark", readStatus: true, percent: 70 }
+
+];
+
+let a = arr.filter(function(status) { return status.readStatus == true;});
+a.sort(function(a,b) { return b.percent - a.percent;});
+
+console.log(a);
