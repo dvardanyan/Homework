@@ -1,0 +1,17 @@
+// problem 2
+
+function flatten(arr) {
+	let a = [];
+	if (!arr) 
+	  return arr;
+	for (let i in arr) {
+		if (Array.isArray(arr[i])) {
+			a = a.concat(flatten(arr[i]));
+		} else {
+			a.push(arr[i])
+		}
+	}
+	return a;
+}
+
+let arr = [1, [3, 4, [1, 2]], 10];
