@@ -1,0 +1,11 @@
+// problem 4
+
+function rotate(arr,n) {
+	let l = arr.length;
+	if (arr.length < 3) 
+	  return arr[1] = arr[0];
+	  else
+	  return arr.slice(l-n).concat(rotate(arr.slice(0,l-n)));
+}
+
+let arr = ["a", "b", "c", "d", "e", "f", "g", "h"]  n = 3;
