@@ -1,0 +1,15 @@
+// problem 3
+
+function digit(n) {
+	function sum(n) {
+	if (Math.floor(n/10) == 0 ) 
+	  return n
+	  else
+	  	return Math.floor(n%10) + sum(Math.floor(n/10));
+    }
+    if (sum(n)<10)
+    	return sum(n);
+    else 
+    	return digit(sum(n));
+
+}
